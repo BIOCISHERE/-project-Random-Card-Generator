@@ -9,7 +9,20 @@ window.onload = () => {
   //write your code here
   document.querySelector(".randomCard").classList.add(randomSuit());
   document.querySelector(".randomCard").innerHTML = randomNumber();
+  setInterval(() => {
+    document.querySelector(".randomCard").classList.remove(randomSuit());
+    document.querySelector(".randomCard").classList.add(randomSuit());
+    document.querySelector(".randomCard").innerHTML = randomNumber();
+  }, 10000);
 };
+
+let cardGenerator = document.querySelector(".cardGenerator");
+
+cardGenerator.addEventListener("click", () => {
+  document.querySelector(".randomCard").classList.remove(randomSuit());
+  document.querySelector(".randomCard").classList.add(randomSuit());
+  document.querySelector(".randomCard").innerHTML = randomNumber();
+});
 
 function randomNumber() {
   let number = [

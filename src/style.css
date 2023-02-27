@@ -49,3 +49,16 @@ body {
   content: "\2666";
   color: red;
 }
+.userData {
+  text-align: center;
+}
+#infoTimer {
+  color: white;
+}
+.cardGenerator {
+  margin: 5px;
+}
+.cardGenerator:hover {
+  background: red;
+  color: yellow;
+}
