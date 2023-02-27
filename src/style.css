@@ -1,1 +1,51 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: green;
+}
+.randomCard {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 180px;
+  background: white;
+  width: 350px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  font-size: 80px;
+}
+.randomCard::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+}
+.randomCard::after {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+}
+.randomCard.spade::before,
+.randomCard.spade::after {
+  content: "\2660";
+  color: black;
+}
+.randomCard.club::before,
+.randomCard.club::after {
+  content: "\2663";
+  color: black;
+}
+.randomCard.heart::before,
+.randomCard.heart::after {
+  content: "\2665";
+  color: red;
+}
+.randomCard.diamond::before,
+.randomCard.diamond::after {
+  content: "\2666";
+  color: red;
+}
